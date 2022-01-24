@@ -1,0 +1,10 @@
+name: workflow for commits in local repos
+on:
+  repository_dispatch:
+    types: [trigger_drupal]
+jobs:
+  commit_on_local-development
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - name: print commit on
+        run: echo "a push has made on local-dev repo"
